@@ -2,7 +2,7 @@ Architectures: armhf
 ButAutomaticUpgrades: yes
 Codename: stable
 Components: main
-Date: Mon, 25 Nov 2024 14:27:35 +0000
+Date: Mon, 25 Nov 2024 14:39:33 +0000
 Description: Pre-built Intel SoCFPGA Linux kernels for DE1-SoC
 Label: DE1-SoC Linux
 NotAutomatic: yes
@@ -10,18 +10,18 @@ Origin: DE1-SoC Linux Repository
 Suite: stable
 Version: 6.6.22-lts-socfpga
 MD5Sum:
- 4b1387c892c31d3bcfe583e735ff8997              296 Release
+ 91b172b31b6ac256a178f5d3b4e364ef              296 Release
  175168389241cc969c326865ccf1a1fa             3531 main/binary-armhf/Packages
- 9383a554b9ecfa0f1e4b9fbed692143f             1260 main/binary-armhf/Packages.gz
+ 8c3b40fda73b1c1e7e7e904686f11389             1260 main/binary-armhf/Packages.gz
 SHA1:
- f5d1cf2a177258e3f819c2aad0692902e1436993              296 Release
+ 467f83d8af65613bfe0f8d366de392b12906ca7e              296 Release
  732ba0b92545b86e7377f51226f8354b5ca60fb4             3531 main/binary-armhf/Packages
- ddc264ee3d56eaf478033abe1cb6f2b5e335a1d5             1260 main/binary-armhf/Packages.gz
+ 83023795a344c1b430583362bd5564034464c170             1260 main/binary-armhf/Packages.gz
 SHA256:
- bbcf9b74e4ec104fb192e74164d29098cc8c62504431a69a8f67e44a6838c204              296 Release
+ 65b0f843e3b74cf5d38bb36127e959cae6dff56d830fa5cec3afd0f618f0b55b              296 Release
  37feec5505348a446d3941f32537b01efbead62627fa5155fd71a1760c16b1de             3531 main/binary-armhf/Packages
- e41157e2feb4d78aa2432168b04350fd0cd2a286a3b3af5dfa614d3322ffcce2             1260 main/binary-armhf/Packages.gz
+ 54de4190bfffbe556325e238384f260bea4c06ac6b9bf2dee74b21b0fa77eedd             1260 main/binary-armhf/Packages.gz
 SHA512:
- 432cd75d8cbc81ec7ff6298bd72bef0873e027f69789bcdeb5b26d71b730803a6313f11a34e6a49dc61d2491597a888d9c790ac6fa70907f27b3ab5f17f26619              296 Release
+ 0d223753f4e443c4b77cbe757268391e77c1e02d1d8d9f51ceca8a854d7b1e8a9b3b841aa5765765e3edca4a1dd8a059da0bccd9c94901d91499d59e298af683              296 Release
  2add83c9ed431a2915fc744ad093267cb094b1f3231cf2fe7769ecba2fffa1c36b6e287773c8bccb61f72fa250c7cbff58409420d80ce43396f28fc9bd550441             3531 main/binary-armhf/Packages
- 4871140b14c05e0267e29adaab15273fe162454ad68eff0654b5b5ee3d5915c7240ac1c2004ef5ced2fd3c3e60344f789f1e365070ea8d866bcfed3f2a27ba52             1260 main/binary-armhf/Packages.gz
+ 0b184e3d73f4975efa767e1bb58e9743730f2cdaee84e15ffee53216268726cc1d4077610560658f92114b5e7aeaf46f574f995ad75c4f0dc228461937315f4f             1260 main/binary-armhf/Packages.gz
