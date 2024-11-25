@@ -189,57 +189,9 @@ build_kernel() {
     echo "Building kernel packages..."
     make "${make_opts[@]}" deb-pkg
     
-    echo "Building DTB..."
-    make "${make_opts[@]}" "intel/socfpga/${DTB_NAME}.dtb"
-    
     # Cleanup
     sudo rm -rf "${BUILD_DIR}/sysroot"
 
-    popd > /dev/null
-}
-
-# Function to create DTB package
-create_dtb_package() {
-    echo "Creating DTB package..."
-    pushd "${KERNEL_SOURCE_DIR}" > /dev/null
-    
-    local dtb_dir="linux-dtb-${FULL_VERSION}"
-    local dtb_pkg_dir="${dtb_dir}/DEBIAN"
-    local dtb_install_dir="${dtb_dir}/boot"
-    
-    mkdir -p "${dtb_pkg_dir}" "${dtb_install_dir}"
-    
-    # Copy specific DTB file
-    cp "arch/${ARCH}/boot/dts/intel/socfpga/${DTB_NAME}.dtb" "${dtb_install_dir}/${DTB_NAME}.dtb"
-    
-    # Create control file with proper maintainer info
-    cat > "${dtb_pkg_dir}/control" <<EOF
-Package: linux-dtb-${FULL_VERSION}
-Version: ${FULL_VERSION}
-Architecture: armhf
-Maintainer: ${DEBFULLNAME} <${DEBEMAIL}>
-Depends: linux-image-${FULL_VERSION}
-Description: Device Tree Blob for Cyclone V SoC Development Kit
- This package contains the Device Tree Blob file for the Cyclone V SoC Development Kit
- running Linux kernel version ${FULL_VERSION}.
-EOF
-
-    # Create postinst script to handle DTB updates
-    cat > "${dtb_pkg_dir}/postinst" <<EOF
-#!/bin/sh
-set -e
-
-# Create symlink to latest DTB
-ln -sf "/boot/${DTB_NAME}.dtb" "/boot/dtb"
-
-exit 0
-EOF
-    chmod 755 "${dtb_pkg_dir}/postinst"
-
-    # Build DTB package
-    dpkg-deb --build "${dtb_dir}"
-    mv "${dtb_dir}.deb" "../linux-dtb-${FULL_VERSION}_armhf.deb"
-    
     popd > /dev/null
 }
 
@@ -265,7 +217,6 @@ main() {
     prepare_environment
     clone_kernel
     build_kernel
-    create_dtb_package
     move_packages
     
     if [ "${CLEAN_BUILD:-false}" = "true" ]; then

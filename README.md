@@ -16,32 +16,49 @@ Currently available kernel version:
 
 ## Installation
 
-1. Add the repository GPG key and source:
+### 1. Add Repository
 
-    ```bash
-    wget -qO - https://yellowpirat.github.io/de1soc-linux/de1soc-linux.gpg | sudo apt-key add -
-    echo "deb https://yellowpirat.github.io/de1soc-linux/packages stable main" | \
-    sudo tee /etc/apt/sources.list.d/de1soc-linux.list
-    ```
+```bash
+wget -qO - https://yellowpirat.github.io/de1soc-linux/de1soc-linux.gpg | sudo apt-key add -
+echo "deb https://yellowpirat.github.io/de1soc-linux/packages stable main" | \
+sudo tee /etc/apt/sources.list.d/de1soc-linux.list
+```
 
-2. Update package lists:
+### 2. Configure DTB Post-Install Script
 
-    ```bash
-    sudo apt update
-    ```
+Before installing the kernel package, create the following post-install script:
 
-3. Install the kernel packages:
+```bash
+sudo mkdir -p /etc/kernel/postinst.d
+cat > /etc/kernel/postinst.d/copy-dtb <<'EOF'
+#!/bin/sh
+set -e
+version="$1"
+image="$2"
+if [ -f "/sys/firmware/devicetree/base/compatible" ]; then
+    compat=$(cat /sys/firmware/devicetree/base/compatible | tr '\0' '\n' | head -1)
+    dtb_name=$(echo "$compat" | sed 's/altr,/socfpga_/').dtb
+    dtb_path="/lib/linux-image-${version}/${dtb_name}"
+    if [ -f "$dtb_path" ]; then
+        cp "$dtb_path" "/boot/dtb"
+    fi
+fi
+EOF
+sudo chmod +x /etc/kernel/postinst.d/copy-dtb
+```
 
-    ```bash
-    # Install kernel image and DTB
-    sudo apt install linux-image-6.6.22-lts-socfpga linux-dtb-6.6.22-lts-socfpga
+### 3. Update and Install
 
-    # Optional: Install kernel headers for module development
-    sudo apt install linux-headers-6.6.22-lts-socfpga
+```bash
+sudo apt update
+sudo apt install linux-image-6.6.22-lts-socfpga
 
-    # Optional: Install debug symbols
-    sudo apt install linux-image-6.6.22-lts-socfpga-dbg
-    ```
+# Optional: Install kernel headers for module development
+sudo apt install linux-headers-6.6.22-lts-socfpga
+
+# Optional: Install debug symbols
+sudo apt install linux-image-6.6.22-lts-socfpga-dbg
+```
 
 ## Repository Maintenance
 
@@ -85,9 +102,9 @@ sudo apt install git make gcc gcc-arm-linux-gnueabihf dpkg-dev bison flex \
     - Push your changes to GitHub
     - Run the update script:
 
-    ```bash
-    ./update_pages.sh
-    ```
+        ```bash
+        ./update_pages.sh
+        ```
 
 ## Package Details
 
