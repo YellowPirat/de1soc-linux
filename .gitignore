@@ -1,0 +1,16 @@
+# Build artifacts
+*.o
+*.ko
+*.deb
+
+# Temporary files
+*~
+*.swp
+*.swo
+
+# Build directories
+/build/
+/temp/
+
+# Keep package repository structure
+/packages/
