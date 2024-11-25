@@ -1,36 +1,44 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA512
 
-Date: Mon, 25 Nov 2024 13:43:09 +0000
+Architectures: armhf
+Codename: stable
+Components: main
+Date: Mon, 25 Nov 2024 15:17:23 +0100
+Description: Pre-built Intel SoCFPGA Linux kernels for DE1-SoC
+Label: DE1-SoC Linux
+Origin: DE1-SoC Linux Repository
+Suite: stable
+Version: 6.6.22-lts-socfpga
 MD5Sum:
- ed133b60cac5b0595b4421d4aa694e0e               38 Release
- 495527e342b374f93d0d8f73ee44c9d1             3531 main/binary-armhf/Packages
- ad912ddbe0d34134e6b755e86ae71785             1257 main/binary-armhf/Packages.gz
+ fd90e5e22a8409d2d85f37246d3e1711              252 Release
+ 175168389241cc969c326865ccf1a1fa             3531 main/binary-armhf/Packages
+ 852127986e30f8f56c31d0e6ee87800b             1260 main/binary-armhf/Packages.gz
 SHA1:
- 970445f69870e9a397e28277df7bc0e3a3633a64               38 Release
- dcd157201f637ad7a03247bfe30007d9ebb810bb             3531 main/binary-armhf/Packages
- 4bda7ab4a1d5d83c0f189bad4b62932ceb861498             1257 main/binary-armhf/Packages.gz
+ 5ca2d12b1a80f1087dc177c54cb52d01b63c0bfd              252 Release
+ 732ba0b92545b86e7377f51226f8354b5ca60fb4             3531 main/binary-armhf/Packages
+ 2584c316997c6c0db7d2800f58d82ff5d6eae650             1260 main/binary-armhf/Packages.gz
 SHA256:
- c002cd26d0b6c417b15047b61627e089178a19d64c994d2a22ebfe0e501071c5               38 Release
- 7687566fef40ee99c302038378d71eae81f91c8b0d710750013ef0167caec703             3531 main/binary-armhf/Packages
- b77e5af29a2796734888910bdfba5392a000a9fd2d468ace1c9de7418e3ddc04             1257 main/binary-armhf/Packages.gz
+ 00d7a54d5f20dc37b49eac37e4eea44d41ee92ef6138e959d44d52df94f14db8              252 Release
+ 37feec5505348a446d3941f32537b01efbead62627fa5155fd71a1760c16b1de             3531 main/binary-armhf/Packages
+ 307bb8220891934d8ae52cd55e11b1e5a9d0e4b9d2b0e92e49be7507a235d32d             1260 main/binary-armhf/Packages.gz
 SHA512:
- da268ed83aef07f5e454da552d7122c55e1916bf1a04789118db84505cba62db827855ce854a8833e9e07a1006b6780df988dd028af79205cd14ed874c5bac44               38 Release
- f87ff86d99dfd143d615fa1ee4ef6ecdf933a826a7c529ca1c6914b9cfef1a28b55fbc1571da0623a0a15427f16b316b228415826d5e3c1f4a3d71abf9dbc28b             3531 main/binary-armhf/Packages
- ba2a6744be05b6829a7d87896a61886b52d2b0793d343fa6c5718654bc7a6e3d9874bd917ad9ecde2dc2407e2474ee0b9658ef6fbed5c62ed80e2dbf8ef74b00             1257 main/binary-armhf/Packages.gz
+ 4737cb046e363fde166a18d3566ea84d23c9b2217c5c9d1b94dc0cebee114d6705301b9bce8ed76382204a4fc4d13bb92f64adbb9c69d3fb41662cb29df4882a              252 Release
+ 2add83c9ed431a2915fc744ad093267cb094b1f3231cf2fe7769ecba2fffa1c36b6e287773c8bccb61f72fa250c7cbff58409420d80ce43396f28fc9bd550441             3531 main/binary-armhf/Packages
+ ac2cef99a9159ee7aa326d96102b4e4d763d1d3bddcb9aa09d08c65ca0495f21c5c342791c33d06fd7a529adb5ae56b68af35e016ea90559e541c68d6712a464             1260 main/binary-armhf/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEFwtFVuYQNC1mYWobEiZUl38XVTkFAmdEfu0ACgkQEiZUl38X
-VTl67BAAlJG7lfRQZDJ4vA+ZqMxGlST+cyW1GC6jBbK9Sy+JspMPbmDQCTm9Fe9R
-K6/kZZ3K2l5M91NewR02t8sRaUOibJxPUh40DejSffM7HIpjNsFblLwxZe7Grdgn
-VkC66K0PGkckRp3bgnrcq94Ibl/6u4sOXE7QhcrvUEHk3VzsPyMwnSYaCxoRNt/K
-3o1g5mmQ0kCkAFpcRVvWVmdP2m91AtQwJ/EpMML7gK5yZig9MREwgwht7r6R3dCR
-Okiyq8ek3oerdYUt1x1KeqwzIgVR2nV7C8SF7B6fRX/vL6QlN0j79SXn1q1Rw7kc
-2TcspRjfB6xQM5E0mvMQ7cK9NO/LEkuAL7FSDLC8c5dH9UoKgv9jTqzReT8xfsZG
-xRI8K/TFQQogNCclGrtkkPzTHqFXK/fEAmURDZvngu7VdYgDj3FprzOsZCZIdi0J
-6zDhqA/Bgp3SXyoTSBh4ZrDNpwhgKKOBU7fyFEK30/0x+pKQK33rF5EMVGKvhrT3
-kR348ONDD+RPnhOYQgCXaDUCB9My98/ayGxK3BLRLBJZDzH1U/KfxTDq7WYF8x8N
-n2xxX/sqJCnGdA4e4A1+c4pdxccCOQaTaoE9Zx2aKv0aDmRBrs/68FgJSO9X+Wnm
-sVjXrWDA0wpNvuv0ZPCC6P3GfEMi3V7r7+qIu9DQ3T1yfCCaVYM=
-=byGk
+iQIzBAEBCgAdFiEEFwtFVuYQNC1mYWobEiZUl38XVTkFAmdEhvMACgkQEiZUl38X
+VTnQthAAwB6f2uu+n4azecZQ5Yd7iGzxpo+hVDcUv4UsQPbxsg/bHJSYl/uDF9C8
+J+oAcpcUlU+RsDobjkTDfg/R25M/dIDWbCZubG/WhMYp6N+fgHAbLP6NzYSBQhed
+8TJzaRfzQnFbXh4FbuRUST9R9OsXCGTfAR6fdpNfT1lHfzQVwXUmz/RHBneEWl1M
+ay/wtAqat/HQ3tFfBPGfLdPUR+ExkW+WmHo6DfHEE3TDDM78gMehtHH4/Rg1j1I+
+ldsnd8xs+1rYB0P316bVHxyQr8mVRbASBYxBkzM6uIEzRHOjHgvPeS2jp+d6zDyc
+sHJI9QwY+3edGufx7WdiihAfKpnq/Q/zS9rFZcGRc4BdKCagdkU2yvxUysbuaDfI
+fLMqD8fx3kXOpOItUOv4hqrZhA0JcveFfUbuL9H6uR0o+Z+0gPvwRt39PayqmXWG
+YQ4lkJxqFsF5yPHCo3RENpO0st7va445lUGXF4UFio1qjftccYQ0RfvjvLIUgRwg
+XmO8A9+vDfs9K4uEubjCoRHDelETMzpyB2uz8jwqNDoFgt3/YqEsqBFp5wl3Qbg7
+rs368HLFimoMGbzOV4Cc5dQi5ilUOWDP1az3tP5mD3wL2NfGngXf9q6xYDk5kvSR
+ODgYKNSH0RL700JQqIRX41ukhRYB2+G+mSE9t9BHKsuKI11ZEf8=
+=LEc3
 -----END PGP SIGNATURE-----
