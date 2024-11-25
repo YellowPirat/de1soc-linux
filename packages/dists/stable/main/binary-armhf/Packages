@@ -4,10 +4,10 @@ Architecture: armhf
 Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
 Depends: linux-image-6.6.22-lts-socfpga
 Filename: pool/main/linux-dtb-6.6.22-lts-socfpga_armhf.deb
-Size: 5712
-MD5sum: 8ad2c622eef26f543900e77fee0f1db4
-SHA1: c9ec25b059d653c883ce025cefc2333c93d1501c
-SHA256: c42d626b04b28c8c9aba4db7af832a864006dfed4ac70df7ef917e2bd8fff275
+Size: 5708
+MD5sum: 7b4a549fcdc66bb0ebb31ddcdf0208db
+SHA1: d7e34a1c759ac7648171b8b2581978c3929aad41
+SHA256: 94ca816a726a42ba3401c8a22ea742fcd4bdb201de5093f0c51c13e8fbdd88c1
 Description: Device Tree Blob for Cyclone V SoC Development Kit
  This package contains the Device Tree Blob file for the Cyclone V SoC Development Kit
  running Linux kernel version 6.6.22-lts-socfpga.
@@ -17,12 +17,12 @@ Source: linux-upstream
 Version: 6.6.22-lts-socfpga
 Architecture: armhf
 Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
-Installed-Size: 50339
+Installed-Size: 49876
 Filename: pool/main/linux-headers-6.6.22-lts-socfpga_6.6.22-lts-socfpga_armhf.deb
-Size: 8362212
-MD5sum: 08089e748af8ca093b1b070c0e572e1a
-SHA1: 001a157a5117a4592c9af8dabed4dc34baa6561a
-SHA256: e7225d72aedd0eff62bac4cb9865ee1baaf268e07e61ecca6bfe3edc6a2374d6
+Size: 8351516
+MD5sum: 68bac0adf9338d3e2960061cea4a5146
+SHA1: a9cec78ab5a33a0932c226c609dbe4f647f2235e
+SHA256: 39ac34110199fd15c636a45d2d872c83576c46bc91a4de56a877778e174b3c29
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -38,10 +38,10 @@ Architecture: armhf
 Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
 Installed-Size: 10231
 Filename: pool/main/linux-image-6.6.22-lts-socfpga_6.6.22-lts-socfpga_armhf.deb
-Size: 6977604
-MD5sum: 9306789535f49c3b6738deafc0c229c3
-SHA1: f78d4d79e00902c83c2aba9224a607982490a904
-SHA256: f449b1c34b23a140c4cc598df124cd8cad123b03b4edca8371dbe92b72724257
+Size: 6977468
+MD5sum: 298c9aba79ce7f4bc619cf1594fde7ce
+SHA1: 7f2efaea43fdcca686e7f78d69f63917cfd32a2e
+SHA256: 6944d6013507d04c654626db1ca21a19cbe310bfa74e7d104761b3343bcd4b2a
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -56,10 +56,10 @@ Architecture: armhf
 Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
 Installed-Size: 190236
 Filename: pool/main/linux-image-6.6.22-lts-socfpga-dbg_6.6.22-lts-socfpga_armhf.deb
-Size: 54082368
-MD5sum: 7ba02ee8439f75b147c4d580dc434be9
-SHA1: 9b7c82b97a9f17718dd2b0bd8ce11b4772878cde
-SHA256: be833293fd2105fe2e0632b72d16687f7590d04d97082957be7de781fbef8503
+Size: 54082096
+MD5sum: 71ca3ac344ebd5c060032cc44fedd7a1
+SHA1: 80ac38770f6a974ebd227928d360c2ba33f3df24
+SHA256: 5610ddb2b86d5fbcf6ea510eae014b8bde63772dd2bb58fbfeaeb5124eb88312
 Section: debug
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -75,10 +75,10 @@ Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
 Installed-Size: 6677
 Provides: linux-kernel-headers
 Filename: pool/main/linux-libc-dev_6.6.22-lts-socfpga_armhf.deb
-Size: 1281600
-MD5sum: 19c9a1a6b373e600a4f1575b012edc3b
-SHA1: 2e961ca2f8379c7f769ff3b50cd0fa272fedec86
-SHA256: f7a5b88679b6272b9cba8bae749a843bc255dfb111b93e8aaf9ce22b7c5b8112
+Size: 1281608
+MD5sum: 337aba55cea7a73edb941e205b11322b
+SHA1: 66e4306fca38281f243f8bcbe3f1e47d71c7c8aa
+SHA256: ff5a0123bddc837bb780431e6309d6e08615a8bc14c226074e36e667deb0ef51
 Section: devel
 Priority: optional
 Multi-Arch: same
