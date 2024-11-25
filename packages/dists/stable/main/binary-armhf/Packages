@@ -1,0 +1,89 @@
+Package: linux-dtb-6.6.22-lts-socfpga
+Version: 6.6.22-lts-socfpga
+Architecture: armhf
+Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
+Depends: linux-image-6.6.22-lts-socfpga
+Filename: pool/main/linux-dtb-6.6.22-lts-socfpga_armhf.deb
+Size: 5712
+MD5sum: 8ad2c622eef26f543900e77fee0f1db4
+SHA1: c9ec25b059d653c883ce025cefc2333c93d1501c
+SHA256: c42d626b04b28c8c9aba4db7af832a864006dfed4ac70df7ef917e2bd8fff275
+Description: Device Tree Blob for Cyclone V SoC Development Kit
+ This package contains the Device Tree Blob file for the Cyclone V SoC Development Kit
+ running Linux kernel version 6.6.22-lts-socfpga.
+
+Package: linux-headers-6.6.22-lts-socfpga
+Source: linux-upstream
+Version: 6.6.22-lts-socfpga
+Architecture: armhf
+Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
+Installed-Size: 50339
+Filename: pool/main/linux-headers-6.6.22-lts-socfpga_6.6.22-lts-socfpga_armhf.deb
+Size: 8362212
+MD5sum: 08089e748af8ca093b1b070c0e572e1a
+SHA1: 001a157a5117a4592c9af8dabed4dc34baa6561a
+SHA256: e7225d72aedd0eff62bac4cb9865ee1baaf268e07e61ecca6bfe3edc6a2374d6
+Section: kernel
+Priority: optional
+Homepage: https://www.kernel.org/
+Description: Linux kernel headers for 6.6.22-lts-socfpga on armhf
+ This package provides kernel header files for 6.6.22-lts-socfpga on armhf
+ .
+ This is useful for people who need to build external modules
+
+Package: linux-image-6.6.22-lts-socfpga
+Source: linux-upstream
+Version: 6.6.22-lts-socfpga
+Architecture: armhf
+Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
+Installed-Size: 10231
+Filename: pool/main/linux-image-6.6.22-lts-socfpga_6.6.22-lts-socfpga_armhf.deb
+Size: 6977604
+MD5sum: 9306789535f49c3b6738deafc0c229c3
+SHA1: f78d4d79e00902c83c2aba9224a607982490a904
+SHA256: f449b1c34b23a140c4cc598df124cd8cad123b03b4edca8371dbe92b72724257
+Section: kernel
+Priority: optional
+Homepage: https://www.kernel.org/
+Description: Linux kernel, version 6.6.22-lts-socfpga
+ This package contains the Linux kernel, modules and corresponding other
+ files, version: 6.6.22-lts-socfpga.
+
+Package: linux-image-6.6.22-lts-socfpga-dbg
+Source: linux-upstream
+Version: 6.6.22-lts-socfpga
+Architecture: armhf
+Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
+Installed-Size: 190236
+Filename: pool/main/linux-image-6.6.22-lts-socfpga-dbg_6.6.22-lts-socfpga_armhf.deb
+Size: 54082368
+MD5sum: 7ba02ee8439f75b147c4d580dc434be9
+SHA1: 9b7c82b97a9f17718dd2b0bd8ce11b4772878cde
+SHA256: be833293fd2105fe2e0632b72d16687f7590d04d97082957be7de781fbef8503
+Section: debug
+Priority: optional
+Homepage: https://www.kernel.org/
+Description: Linux kernel debugging symbols for 6.6.22-lts-socfpga
+ This package will come in handy if you need to debug the kernel. It provides
+ all the necessary debug symbols for the kernel and its modules.
+
+Package: linux-libc-dev
+Source: linux-upstream
+Version: 6.6.22-lts-socfpga
+Architecture: armhf
+Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
+Installed-Size: 6677
+Provides: linux-kernel-headers
+Filename: pool/main/linux-libc-dev_6.6.22-lts-socfpga_armhf.deb
+Size: 1281600
+MD5sum: 19c9a1a6b373e600a4f1575b012edc3b
+SHA1: 2e961ca2f8379c7f769ff3b50cd0fa272fedec86
+SHA256: f7a5b88679b6272b9cba8bae749a843bc255dfb111b93e8aaf9ce22b7c5b8112
+Section: devel
+Priority: optional
+Multi-Arch: same
+Homepage: https://www.kernel.org/
+Description: Linux support headers for userspace development
+ This package provides userspaces headers from the Linux kernel.  These headers
+ are used by the installed headers for GNU glibc and other system libraries.
+

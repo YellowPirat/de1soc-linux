@@ -1,0 +1,36 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Date: Mon, 25 Nov 2024 01:59:03 +0000
+MD5Sum:
+ 47123802566f3faff2fb1e3cfb25e59a               38 Release
+ a7f6da9b99a39f994b5fba610b72268a             3531 main/binary-armhf/Packages
+ d5dbea7ca6e82db175453c4552394cdb             1261 main/binary-armhf/Packages.gz
+SHA1:
+ ccfec06f022284c5b2179766e025d4fe677d7922               38 Release
+ 274529ba50b91b1445cb671e4e9ca5cda6089de2             3531 main/binary-armhf/Packages
+ 174ffad0962284b947644b1cd1983b75eb9986ce             1261 main/binary-armhf/Packages.gz
+SHA256:
+ 9416153ec62d310727bb08acc0212264f45284f23073e3229198e3134cb0c8a3               38 Release
+ 8b1c9696518f0f8f428aed9c99205fb6edf31e10e5dd65fe3cdcdb2e14e0f961             3531 main/binary-armhf/Packages
+ 35001933f2951d391394ba5eb6cd360aa3b64ed36da59a69faa49f7e229f1f5a             1261 main/binary-armhf/Packages.gz
+SHA512:
+ 8cee71171b6731ea0383170e62952d34a9ce11dd4e5ed3cb585f44edc707f30758f1265c85eea713bfdc63ebaaf745f1f61c07126934d302f82aace1d68db203               38 Release
+ 6544290c5bd074a83e0413ad41f87dbd4e22ba96de04a70fe0eeb0801e4ba3d098be3d85dbb7c7819e3ef246f216601188497f3a420fcfc8ca255b976ccccebd             3531 main/binary-armhf/Packages
+ 202e8d5c573c5c220a762d3654429bb2ef4857e554c30c392648fd8b7fb80943beb2762b5aa10f3e6a91de2fa1395d3e893b05334d5dc385ac11b2a3c31b2328             1261 main/binary-armhf/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEFwtFVuYQNC1mYWobEiZUl38XVTkFAmdD2ekACgkQEiZUl38X
+VTmbKBAAro2vlhE2DidHtsScsywwJJENXsOgqCzxL93M+XxTSglUsfw2DC3sf13D
+gVG1jfkJkteawchi/YNyUc8ASYn8NgfTkoE+vNTubcD/KRzbwyTamrg5kUsef6tr
+fx62H2dhHqn/getKrH4EJPhiPU0f+HmJWiePLsfpd1JxoysQ5i0cFouXEAPPoUPN
+y5nR/cYvsdrAgzJpk/cpW3xI1/XWdEQZzC2NvXpE6I3bjelcXADZ5z2ghfulSVrS
+/jljXVKUl93AP7Re+blMC+sFBzblNWwB9snNXYE49QEBieyCqfsj6C7KtH4tVksg
+lHJ0480rtLSMkIj1neuBNQGYQwmgYholtiMV1pxS2DSj6SPJY3uH0xTAXWaC95Cn
+BNKdXhOTlu2pyIKXp+P819UOnnDFkikRC1is3bJXe0tKz+jUf4TqSr9C1Lu405k7
+3R5ImlAGIBBKjSPWzc5wlZTBdsBTIq5QoRSpbQ7sQ5PUsevZ6QquQs33/IPL1lDe
+EOurHJF06Py3FPA0mgxXKrrWt4RBfuQnmbOrFI/8t1feMFiG33+fvSeJ23wbj8m6
+xTmGURQUTJqdrQS1+XP2cS8yviZ+0Za94RbaBHXr4jGSURtLK/MWaOdIWq/RnpT+
+DRs+OCDpRE0wY6HdlL/M5mOWFUlQp7fx0arTgmCAlQxdRXmx9Cg=
+=msGf
+-----END PGP SIGNATURE-----
