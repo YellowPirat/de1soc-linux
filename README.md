@@ -20,7 +20,7 @@ Currently available kernel version:
 
     ```bash
     wget -qO - https://yellowpirat.github.io/de1soc-linux/de1soc-linux.gpg | sudo apt-key add -
-    echo "deb https://yellowpirat.github.io/de1soc-linux stable main" | \
+    echo "deb https://yellowpirat.github.io/de1soc-linux/packages stable main" | \
     sudo tee /etc/apt/sources.list.d/de1soc-linux.list
     ```
 

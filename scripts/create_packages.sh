@@ -28,18 +28,67 @@ mkdir -p "${REPO_DIR}/dists/stable/main/binary-armhf"
 # Generate Packages file
 pushd "${REPO_DIR}" > /dev/null
 echo "Generating Packages file..."
-dpkg-scanpackages pool/main > dists/stable/main/binary-armhf/Packages
+dpkg-scanpackages --arch armhf pool/main > dists/stable/main/binary-armhf/Packages
 gzip -k dists/stable/main/binary-armhf/Packages
 
 # Generate and sign Release files
 pushd dists/stable > /dev/null
 echo "Generating and signing Release files..."
-apt-ftparchive release . > Release
+
+# Generate configuration for Release file
+cat > Release.conf <<EOF
+Dir {
+  ArchiveDir ".";
+  OverrideDir "";
+  CacheDir "";
+};
+
+TreeDefault {
+  Directory "pool/";
+};
+
+BinDirectory "pool/main" {
+  Packages "main/binary-armhf/Packages";
+  BinOverride "";
+  Extra {
+    Built-Using "";
+  };
+};
+
+Default {
+  Packages {
+    Extensions ".deb";
+    Compress ". gzip";
+  };
+};
+
+APT::FTPArchive::Release {
+  Origin "DE1-SoC Linux Repository";
+  Label "DE1-SoC Linux";
+  Suite "stable";
+  Codename "stable";
+  Version "6.6.22-lts-socfpga";
+  Architectures "armhf";
+  Components "main";
+  Description "Pre-built Intel SoCFPGA Linux kernels for DE1-SoC";
+  NotAutomatic "yes";
+  ButAutomaticUpgrades "yes";
+};
+EOF
+
+# Generate Release file without timestamp-related fields
+apt-ftparchive -c=Release.conf release . > Release
+
+# Sign the Release file
 gpg --default-key "${GPG_KEY}" -abs -o Release.gpg Release
 gpg --default-key "${GPG_KEY}" --clearsign -o InRelease Release
-popd > /dev/null  # back to REPO_DIR
 
+# Cleanup
+rm Release.conf
+
+popd > /dev/null # back to REPO_DIR
 echo "Repository creation complete!"
 echo "Package contents:"
 find pool/main -type f -name "*.deb" -exec basename {} \;
-popd > /dev/null  # back to starting directory
+sleep 1
+popd > /dev/null # back to starting directory

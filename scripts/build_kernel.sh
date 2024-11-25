@@ -153,8 +153,22 @@ clone_kernel() {
     popd > /dev/null
 }
 
-# Function to build kernel and packages
+prepare_sysroot() {
+    local SYSROOT="${BUILD_DIR}/sysroot"
+    mkdir -p "${SYSROOT}"
+
+    # Use debootstrap to create minimal sysroot
+    sudo debootstrap --foreign --arch=armhf bookworm "${SYSROOT}"
+    sudo cp /usr/bin/qemu-arm-static "${SYSROOT}/usr/bin/"
+    sudo chroot "${SYSROOT}" /debootstrap/debootstrap --second-stage
+
+    # Set environment variables for the build
+    export QEMU_LD_PREFIX="${SYSROOT}"
+}
+
 build_kernel() {
+    prepare_sysroot
+
     echo "Building kernel..."
     pushd "${KERNEL_SOURCE_DIR}" > /dev/null
     
@@ -166,6 +180,7 @@ build_kernel() {
         "LOCALVERSION=-${KERNEL_SUFFIX}"
         "KDEB_PKGVERSION=${FULL_VERSION}"
         "KERNELRELEASE=${FULL_VERSION}"
+        "HOSTCC=${CROSS_COMPILE}gcc"
     )
     
     echo "Configuring kernel..."
@@ -177,6 +192,9 @@ build_kernel() {
     echo "Building DTB..."
     make "${make_opts[@]}" "intel/socfpga/${DTB_NAME}.dtb"
     
+    # Cleanup
+    sudo rm -rf "${BUILD_DIR}/sysroot"
+
     popd > /dev/null
 }
 
