@@ -5,10 +5,10 @@ Architecture: armhf
 Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
 Installed-Size: 49876
 Filename: pool/main/linux-headers-6.6.22-lts-socfpga_6.6.22-lts-socfpga_armhf.deb
-Size: 8351388
-MD5sum: f3e7eea1c51b5ac3ed15bdfd0355ae34
-SHA1: e91807f506872bfbd74bba3a8f8182ab0043012d
-SHA256: eba4ad0bbd5448460f540ca2cf5796cdfd6b194841cd1300cc98081307be6013
+Size: 8351748
+MD5sum: 064d462cb0ce1d417243e7584543b637
+SHA1: e67a7f297b49761797e93e873142a247a61b5563
+SHA256: 4e964d75a5ed9e5a45ca1d6b780225de3ec352eb4521922f4937c06aa907e0d3
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -24,10 +24,10 @@ Architecture: armhf
 Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
 Installed-Size: 10231
 Filename: pool/main/linux-image-6.6.22-lts-socfpga_6.6.22-lts-socfpga_armhf.deb
-Size: 6977348
-MD5sum: 15990bd03bc780e57f0a759e8f245ce5
-SHA1: 38a19e8c2b50aeb5af4c2577f7b2f10380d39897
-SHA256: edd5992a4fc368c58ddf931b2ecf64375ba7e49b91e5d9ab128211eef60eac4a
+Size: 6977300
+MD5sum: a9fc322c26b0063ef8c831a3f6229417
+SHA1: e113e8127a6edbaf982188bc24cecabff96cf279
+SHA256: 71870400cd2af013977df94610018595a06313e456c9bc987b61acaa78c7ae06
 Section: kernel
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -42,10 +42,10 @@ Architecture: armhf
 Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
 Installed-Size: 190236
 Filename: pool/main/linux-image-6.6.22-lts-socfpga-dbg_6.6.22-lts-socfpga_armhf.deb
-Size: 54082124
-MD5sum: d43a157e99162b4069e027b5ef031a7d
-SHA1: 6e2932fb67b1e0d3b3c5f2e92f56596fada82c59
-SHA256: b7de08bf927b32d16adbbbc8b56c8ab0111e3e995c4a62fbc9d2a954cb78ff63
+Size: 54079620
+MD5sum: db93f7ace73e0b0b965b3ffcb88ed165
+SHA1: ae29781af33ed6d3ea8415c0f2fae0a1e4f9f590
+SHA256: 41c59e279e41737d35f92bba17919fc32e6cadafcaf1c52341c88ba021c24248
 Section: debug
 Priority: optional
 Homepage: https://www.kernel.org/
@@ -61,10 +61,10 @@ Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
 Installed-Size: 6677
 Provides: linux-kernel-headers
 Filename: pool/main/linux-libc-dev_6.6.22-lts-socfpga_armhf.deb
-Size: 1281604
-MD5sum: 0a132ff801a0c0a63001ad9f7e2a3375
-SHA1: e00d846d8f270b8fe0a22fc3b8dbe4164ef67cbd
-SHA256: 316c86a3124d80f4931d68475afbca4f9adb832512672e3269be6a1298606019
+Size: 1281544
+MD5sum: 93546dcbc41733cf638266bcd61f30c5
+SHA1: e54a0b3e3facaad0e334b6a0505aa3595901c76d
+SHA256: 407e2c8d269bb95d6141f2bda93f91f29acc053f993af05afd43b39ca2887690
 Section: devel
 Priority: optional
 Multi-Arch: same
