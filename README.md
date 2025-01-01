@@ -1,8 +1,10 @@
 # DE1-SoC Linux Repository
 
-A Debian package repository that provides pre-built Intel (Altera) SoCFPGA Linux kernels, headers, and device tree blobs for the Terasic DE1-SoC development board. This repository packages the official Intel SoCFPGA Linux kernel (https://github.com/altera-opensource/linux-socfpga) to simplify deployment on DE1-SoC boards.
+A Debian package repository providing pre-built Intel (Altera) SoCFPGA Linux kernels and additional drivers for the Terasic DE1-SoC development board.
 
 ## Available Packages
+
+### Kernel Packages
 
 - `linux-image-6.6.22-lts-socfpga`: Linux kernel image and modules
 - `linux-headers-6.6.22-lts-socfpga`: Kernel headers for module development
@@ -10,9 +12,9 @@ A Debian package repository that provides pre-built Intel (Altera) SoCFPGA Linux
 - `linux-image-6.6.22-lts-socfpga-dbg`: Debug symbols for kernel debugging
 - `linux-libc-dev`: Linux support headers for userspace development
 
-Currently available kernel version:
+### Driver Packages
 
-- 6.6.22-lts-socfpga
+- `yp-can-dkms`: CAN bus driver module (DKMS package)
 
 ## Installation
 
@@ -51,10 +53,15 @@ sudo chmod +x /etc/kernel/postinst.d/copy-dtb
 
 ```bash
 sudo apt update
+
+# Install kernel
 sudo apt install linux-image-6.6.22-lts-socfpga
 
-# Optional: Install kernel headers for module development
+# Optional: Install kernel headers for module development / dkms
 sudo apt install linux-headers-6.6.22-lts-socfpga
+
+# Optional: Install CAN driver
+sudo apt install yp-can-dkms
 
 # Optional: Install debug symbols
 sudo apt install linux-image-6.6.22-lts-socfpga-dbg
@@ -67,12 +74,75 @@ For repository maintainers:
 ### Required Tools
 
 ```bash
-# Install all required dependencies
-sudo apt install git make gcc gcc-arm-linux-gnueabihf dpkg-dev bison flex \
-    libssl-dev bc rsync lsb-release fakeroot debhelper
+# Install required dependencies
+sudo apt install dpkg-dev apt-utils gpg
 ```
 
-### Building and Publishing Packages
+### Repository Management
+
+The repository follows a simple structure:
+
+```text
+packages/
+├── pool/
+│   └── main/          # All .deb packages go here
+└── dists/
+    └── stable/
+        └── main/
+            ├── binary-all/    # Architecture independent packages
+            └── binary-armhf/  # ARM hardware float packages
+```
+
+To update the repository:
+
+1. Add packages:
+
+    ```bash
+    # Create structure if it doesn't exist
+    mkdir -p packages/pool/main
+    mkdir -p packages/dists/stable/main/binary-all
+    mkdir -p packages/dists/stable/main/binary-armhf
+
+    # Copy packages
+    cp *.deb packages/pool/main/
+    ```
+
+2. Generate package indices:
+
+    ```bash
+    cd packages
+    dpkg-scanpackages --arch all pool/main > dists/stable/main/binary-all/Packages
+    gzip -k dists/stable/main/binary-all/Packages
+
+    dpkg-scanpackages --arch armhf pool/main > dists/stable/main/binary-armhf/Packages
+    gzip -k dists/stable/main/binary-armhf/Packages
+    ```
+
+3. Create and sign Release file:
+
+    ```bash
+    cd dists/stable
+    apt-ftparchive -o APT::FTPArchive::Release::Origin="DE1-SoC Linux Repository" \
+                -o APT::FTPArchive::Release::Label="DE1-SoC Linux" \
+                -o APT::FTPArchive::Release::Suite="stable" \
+                -o APT::FTPArchive::Release::Architectures="all armhf" \
+                -o APT::FTPArchive::Release::Components="main" \
+                release . > Release
+
+    # Sign the release file
+    gpg --default-key "YOUR-GPG-KEY" -abs -o Release.gpg Release
+    gpg --default-key "YOUR-GPG-KEY" --clearsign -o InRelease Release
+    ```
+
+4. Publish the repository:
+
+    ```bash
+    git add -f packages/
+    git commit -m "Update package repository $(date +%Y-%m-%d)"
+    git push
+    ```
+
+### Building Kernel Packages
 
 1. Clone the repository:
 
@@ -91,20 +161,12 @@ sudo apt install git make gcc gcc-arm-linux-gnueabihf dpkg-dev bison flex \
     ./build_kernel.sh
     ```
 
-4. Create packages (requires GPG key for signing):
+The script will automatically:
 
-    ```bash
-    GPG_KEY="your-gpg-key-here" ./create_packages.sh
-    ```
-
-5. Update GitHub Pages:
-
-    - Push your changes to GitHub
-    - Run the update script:
-
-        ```bash
-        ./update_pages.sh
-        ```
+- Clone the Intel SoCFPGA Linux repository
+- Configure it for DE1-SoC
+- Build the kernel and packages
+- Generate all required .deb files
 
 ## Package Details
 
@@ -113,7 +175,7 @@ sudo apt install git make gcc gcc-arm-linux-gnueabihf dpkg-dev bison flex \
 - Version: 6.6.22-lts-socfpga
 - Architecture: armhf
 - Size: 6.7 MB
-- Description: Contains the Linux kernel, modules and corresponding files
+- Description: Linux kernel, modules and corresponding files
 
 ### linux-headers-6.6.22-lts-socfpga
 
@@ -143,12 +205,19 @@ sudo apt install git make gcc gcc-arm-linux-gnueabihf dpkg-dev bison flex \
 - Size: 1.2 MB
 - Description: Linux support headers for userspace development
 
+### yp-can-dkms
+
+- Version: 1.0.0
+- Architecture: all
+- Description: CAN bus driver module (DKMS)
+- Dependencies: dkms, linux-headers-6.6.22-lts-socfpga
+
 ## License
 
 - Linux kernel: GPL-2.0 (maintained by Intel)
-- Packaging scripts: MIT
+- yp-can-dkms: GPL-2.0+
+- Repository tools and scripts: MIT
 
 ## Source
 
-The kernel source code is maintained by Intel at:
-https://github.com/altera-opensource/linux-socfpga
+- Kernel source: [https://github.com/altera-opensource/linux-socfpga](https://github.com/altera-opensource/linux-socfpga)
