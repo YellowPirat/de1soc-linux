@@ -1,3 +1,17 @@
+Package: linux-dtb-6.6.22-lts-socfpga
+Version: 6.6.22-lts-socfpga
+Architecture: armhf
+Maintainer: Ahmet Emirhan Göktaş <emirhangoktas01@gmail.com>
+Depends: linux-image-6.6.22-lts-socfpga
+Filename: pool/main/linux-dtb-6.6.22-lts-socfpga_armhf.deb
+Size: 5712
+MD5sum: b8288c130500ce5d9f0dd8c8c91192ff
+SHA1: bc68528f6d6e43e46564f1889cfcd136e5ad51e1
+SHA256: 9a1853ab779b17afe89d7af26784924ec43434b150bc59f5ffd5e29ab86b2813
+Description: Device Tree Blob for Cyclone V SoC Development Kit
+ This package contains the Device Tree Blob file for the Cyclone V SoC Development Kit
+ running Linux kernel version 6.6.22-lts-socfpga.
+
 Package: linux-headers-6.6.22-lts-socfpga
 Source: linux-upstream
 Version: 6.6.22-lts-socfpga
@@ -72,4 +86,23 @@ Homepage: https://www.kernel.org/
 Description: Linux support headers for userspace development
  This package provides userspaces headers from the Linux kernel.  These headers
  are used by the installed headers for GNU glibc and other system libraries.
+
+Package: yp-can-dkms
+Version: 1.0.0
+Architecture: all
+Maintainer: Ahmet Emirhan Göktas <emirhangoktas01@gmail.com>
+Installed-Size: 64
+Depends: dkms
+Filename: pool/main/yp-can-dkms_1.0.0_all.deb
+Size: 8708
+MD5sum: f3b6b8088b0ee2bf08ef5414eea0f502
+SHA1: 6f870e87feee3fd998ef11b2842c171aa84263fd
+SHA256: bb688ed5d53410fc210db91e14c253235025912ec4f80598882282c7c708349c
+Section: kernel
+Priority: optional
+Description: DKMS source for the YellowPirat CAN driver
+ This package provides the dkms source code for the YellowPirat CAN driver.
+ This is a Linux kernel driver for the YellowPirat CAN core implemented
+ on the DE1-SoC FPGA. The driver supports multiple CAN interfaces and
+ provides standard SocketCAN integration.
 

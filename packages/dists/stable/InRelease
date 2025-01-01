@@ -1,46 +1,49 @@
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA512
+Hash: SHA256
 
-Architectures: armhf
-ButAutomaticUpgrades: yes
-Codename: stable
+Architectures: all armhf
 Components: main
-Date: Wed, 11 Dec 2024 01:57:32 +0000
-Description: Pre-built Intel SoCFPGA Linux kernels for DE1-SoC
+Date: Wed, 01 Jan 2025 02:35:13 +0000
 Label: DE1-SoC Linux
-NotAutomatic: yes
 Origin: DE1-SoC Linux Repository
 Suite: stable
-Version: 6.6.22-lts-socfpga
 MD5Sum:
- cc316e02117641150b131fb57a7efdb9              296 Release
- dc63e034c8c247171053701d0ae2b2a3             2909 main/binary-armhf/Packages
+ d70a23637de2e4d61df92a3b5e0268d9              148 Release
+ aa474efdb01a6e897c5db249f8e426ed              719 main/binary-all/Packages
+ d3c0431fbadaa7d1849311908ab33f6f             1531 main/binary-all/Packages.gz
+ a1f1cc572535b34e685eb3323fcdf154             4250 main/binary-armhf/Packages
  60a7118f5bb4ec9423aa84fe68433690             1075 main/binary-armhf/Packages.gz
 SHA1:
- 3bcd59425c931ceb09f5be5619dc0847e735f02e              296 Release
- c59f1474b386f722364639e7d2d7482c86747a8a             2909 main/binary-armhf/Packages
+ c1e9a7aba9b0dffaaa0a84dc502524d89dc86a0c              148 Release
+ 2de75f1297b503c617441ab736d7240bec9cef64              719 main/binary-all/Packages
+ e35a4893499f5fe5d38f1496ff22229a46e2f63d             1531 main/binary-all/Packages.gz
+ 1c2d3ba031232502ea1a4407e3d4de682eb3f643             4250 main/binary-armhf/Packages
  7b88725fa839ccc72ffb85b3721fc96aec722415             1075 main/binary-armhf/Packages.gz
 SHA256:
- ea5d5f33434add77cd4cc90999952dcf4f0fe3687322b12e8cd1417c1fa63116              296 Release
- d0f59263c17a8d934f0e47e5298767dbb7e42bce69a9f169a8854a037c1f45ce             2909 main/binary-armhf/Packages
+ 4c8429db050917477d971beffef9286412b18c7f3e1e891e69004cbebef0097c              148 Release
+ a7f6a59bcb5a27c8b3050485e8c1aaf4a6892276626bccea65788579be0dacf5              719 main/binary-all/Packages
+ 504389213c756e8f89fea380cb70659a1e76d18a6f950914eb1e3c1753901f39             1531 main/binary-all/Packages.gz
+ baf4e2ef8dc5d395f401a85a819e04493df9e7d17d5df5c94b7bca56c2d36742             4250 main/binary-armhf/Packages
  0c73cbbe58e3cb296074048568ad20e9bb97d9c3c0ac8321f6fcdf3b7f5ac2c1             1075 main/binary-armhf/Packages.gz
 SHA512:
- 0a4feafb5c3dd348e004fdb19b336bc3c4a15fb43d30384f7234c1ef39e2aaf2eff5164ed27caed7342bfe569687a6452c834783e4fa106368adf944777eaeef              296 Release
- 51c24a2038a7cbc28b79dd0866f2fbdded7ad488429feeaaf07caaeec5c1a8b52cef01be086796d08338273aa587b405632b4068750bfb81566f09630225381a             2909 main/binary-armhf/Packages
+ 20f5d7a496c1b16f47e4c4fa6260fa0467f3ae966b41c2533abbf1c272dab45405eba7bd7f4b2c2b6726270b14325caff3285c198aadd211ee51443e59d4c3ea              148 Release
+ dee1986d91165c7d59b20ed0ea133ee6c9d394ffee7fc5159bb03a2765fe3319e69367a4e215d311a24b44e5edf46c75af3b275520432d3a1688dbc3f4fba560              719 main/binary-all/Packages
+ 6e12e21aefecda6325ed1045b4eeffecd32046d6b60bd7d8fd10b2f0ba151a2bc0ebb53bf40a3f65f7b6fd57f6aaf53dc7687bca978ce2ca66cb0004641b29fa             1531 main/binary-all/Packages.gz
+ 368c0dbfceea3aa117c8569175e7d7b417d1db8b6e95c8665b8bc35c6fec09ae5285386c0134b09b40f0d378308b134790b15706575dd8aa3b57a541a749f043             4250 main/binary-armhf/Packages
  334974d1e4f9682e75019dc39320da8686a3531dc953c50e5bd809779b6b23dabe9798924ddee87a52466f72cca1b9319abcc61b5c025c3d2a6d0a43ca153a68             1075 main/binary-armhf/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEFwtFVuYQNC1mYWobEiZUl38XVTkFAmdY8YwACgkQEiZUl38X
-VTk2Dw//Z67SQOtxTIRqhyEzZuJerJXiSZxh2Eo1O+dmipofOCqVDy0I2TsQrj3b
-SZiRc+R573IRPPLbwvCAzGxyEnoAtsDlHDrzu/XroOu9MGL+PvcLglUsNkW5QRiL
-rke/rjbm761lpH+dsSeOI2t4HdYW4NpWGJuG9PvqwvfMWXluvCSNBT5DurZ0FkLb
-X/yBe7eALf31mQVPm6998FoOLCA/zIyvP97+lSibuPhAJzL+REblgxy21avTF4Ib
-pAX5Co0kQn+phw3itBMZIT7qtjneHBhdamOf50T7mwo95CyFmCJuW3HhCRlvMrSU
-wRzbW3wQ9BfHbG45VIDi2snS02py4LeUKZMmHdYrUFH4cDkIEPd1lCmpRd6FiIW8
-dId6LwvjE7U+wKt8MDKfyrWIW8Hbo406SamiMlpaUw5sL9qtSmLOPxTLDzfKPh6W
-YdTpEHWbYlaD1+VrO/SP61/Wa0QJBTub6X6E5G8UDPyyzus3i7D+4e+9iOxoB2Lh
-6xXTGTnwIJsYCkqtcLVtR9erPA7hqEwb91wI/YVn4MFWoTtVJZDRYFAZuCa0+Fa1
-fcIZnnWtpkYekd+KgVncV/ZvF/despWjQsyYa2STKZXRbzoI7/hvCDoihD29UJ1s
-cpD7ICVvX8AiwMX/mzzgz97W2uy2WXowS2ybrEHTH+Pb0JBaIHU=
-=ucil
+iQIzBAEBCAAdFiEEFwtFVuYQNC1mYWobEiZUl38XVTkFAmd0qo4ACgkQEiZUl38X
+VTksrA/9ErD2lYv69/q6H128JTHUJ0i4P1HslG73gNwhOUGu1u9VUjp48KqQhX8X
+kip9oMWC4pMVJEO3xpVlCnIVZFRG5FHH2AjZvgaIz8DsXb17DoIinjFs0g2b9B7g
+SQ7Xpw6GHAkaPSXG2jWl3MoSAtJvVbtg6qilJfxOUcJQF7uHzm7ZOyV2SJeAZjMo
+DMHAGslKawaAkicLAswGv/tLviV69jD2uUBJwpvFdm9rUd6lWebyyPHiScUZGXlF
+Rqi6wPa7rBSQsyi0T5WrgqeesTb8RSZ9WgPYLZwqwdn29lMsTntyn1vnd1b068pO
+0IzsL3hgU/Ew4YSaiq+osnfQrGBOURmrdkF91FjOAopySfXbCRei1XFlkaTwZIkV
+u3RwvqIs+ew31jJ1QTm15eH8pLjogzRH2M0eq8cLBXEXXnfuKjcxkn7V4CfRhU06
+Ag2TI8ZWAtjB0agdLWx+H0N86eXcYDjmOSMksD/IvFbS6Tr7MWaZgMPg1LZdX5gN
+Kpe/ZjH7ieAZjYDYlGRHvwm9EbUJ1OXFZMOTgDC3ofJOeo/bWt80oKBB9wf1/XtO
+yji4kQzWNCosZ4HOxbJBvS2QoSDuPKd5FQ0Z90ncEUfXSBvUh/09l22D7zgTrj1q
+CbOJSJ6cgclTaivPSR+aKGmMEvvEBsSW/MN0bobmfcGIrLe3Jvc=
+=FM+J
 -----END PGP SIGNATURE-----
